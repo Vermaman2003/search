@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Search Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Search Blog</h1>
+        <input type="text" id="searchBox" placeholder="Search..." onkeyup="filterResults()">
+        
+        <div class="filter">
+            <label for="category">Filter by Category:</label>
+            <select id="category" onchange="filterResults()">
+                <option value="">All</option>
+                <option value="tech">Tech</option>
+                <option value="lifestyle">Lifestyle</option>
+                <option value="health">Health</option>
+            </select>
+        </div>
+
+        <div id="results" class="results">
+            <div class="result" data-category="tech">
+                <h2><a href="#">Understanding JavaScript Closures</a></h2>
+                <p>A deep dive into closures in JavaScript and how they work.</p>
+                <span class="date">Published on: 2023-01-15</span>
+            </div>
+            <div class="result" data-category="lifestyle">
+                <h2><a href="#">10 Tips for a Healthier Lifestyle</a></h2>
+                <p>Simple changes you can make to improve your health.</p>
+                <span class="date">Published on: 2023-02-20</span>
+            </div>
+            <div class="result" data-category="health">
+                <h2><a href="#">The Benefits of Meditation</a></h2>
+                <p>How meditation can improve your mental health.</p>
+                <span class="date">Published on: 2023-03-10</span>
+            </div>
+            <div class="result" data-category="tech">
+                <h2><a href="#">Latest Trends in Web Development</a></h2>
+                <p>Explore the latest technologies in web development.</p>
+                <span class="date">Published on: 2023-04-05</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
